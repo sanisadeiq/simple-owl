@@ -23,3 +23,5 @@ Route::controllers([
 Route::get('users', function(){
 	return 'Users! Noob és tu  !';
 });
+
+Route::get('treeview', 'TreeViewController@index');
