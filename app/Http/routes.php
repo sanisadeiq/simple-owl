@@ -21,5 +21,5 @@ Route::controllers([
 ]);
 
 Route::get('users', function(){
-	return 'Users! NUB';
+	return 'Users! NULOLOLOLB';
 });
