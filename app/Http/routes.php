@@ -21,5 +21,5 @@ Route::controllers([
 ]);
 
 Route::get('users', function(){
-	return 'Users! Noob és tu!';
+	return 'Users! Noob és tu  !';
 });
