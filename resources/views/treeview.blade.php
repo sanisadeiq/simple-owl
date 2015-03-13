@@ -99,6 +99,7 @@ function renderMenu($items) {
     }
 
     return $render . '</ul>';
+   
 }
 
 echo renderMenu($topLevel);
@@ -226,6 +227,34 @@ echo renderMenu($topLevel);
 			</li>
 		</ul>
 		-->
+
+		<?php 
+		$oldcwd = getcwd();
+
+		 exec('java -jar myjar.jar', $output);
+		 foreach($output as $out) {
+
+		echo $out;
+	};
+		
+		//array to string
+
+
+
+
+// $oldcwd = getcwd();
+// chdir("C:/");
+// $output = shell_exec('dir');
+
+ // chdir($oldcwd); 
+
+//$output = exec('java -jar C:/agent.jar', $output);
+ 
+//shell_exec('java -jar C:/agent.jar')
+			//$output =	shell_exec("java -jar agent.jar server");
+//system("c:\\agent.jar\");
+	//echo '<pre>Output: '.$output.'</pre>';
+		?>
 	</div>
 </body>
 </html>
