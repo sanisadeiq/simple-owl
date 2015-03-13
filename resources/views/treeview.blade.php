@@ -6,15 +6,6 @@
 	<script src={{ URL::asset('js/jquery/jquery-2.1.3.min.js') }}></script>
 	<script src={{ URL::asset('js/bootstrap.min.js') }}></script>
 
-	<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-
 	<script type="text/javascript">
 		$(function () {
 			$('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
@@ -34,7 +25,86 @@
 </head>
 <body>
 
+
 	<div class="tree well">
+	<?php 
+
+$items = Array
+(
+    Array
+    (
+        'id' => 1,
+        'title' => 'menu1',
+        'parent_id' => 0
+    ),
+    Array
+    (
+        'id' => 2,
+        'title' => 'submenu1-1',
+        'parent_id' => 1
+    ),
+    Array
+    (
+        'id' => 3,
+        'title' => 'submenu1-2',
+        'parent_id' => 1
+    ),
+    Array
+    (
+        'id' => 4,
+        'title' => 'menu2',
+        'parent_id' => 0
+    ),
+    Array
+    (
+        'id' => 5,
+        'title' => 'submenu2-1',
+        'parent_id' => 4
+    ),
+    Array
+    (
+        'id' => 6,
+        'title' => 'submenu3-1',
+        'parent_id' => 3
+    )
+);
+
+//index elements by id
+foreach ($items as $item) {
+    $item['subs'] = array();
+    $indexedItems[$item['id']] = (object) $item;
+}
+
+
+//assign to parent
+$topLevel = array();
+foreach ($indexedItems as $item) {
+    if ($item->parent_id == 0) {
+        $topLevel[] = $item;
+    } else {
+        $indexedItems[$item->parent_id]->subs[] = $item;
+    }
+}
+
+//recursive function
+function renderMenu($items) {
+    $render = '<ul>';
+
+    foreach ($items as $item) {
+        $render .= '<li><span>' . $item->title . '</span>';
+        if (!empty($item->subs)) {
+            $render .= renderMenu($item->subs);
+        }
+        $render .= '</li>';
+    }
+
+    return $render . '</ul>';
+}
+
+echo renderMenu($topLevel);
+
+?>
+<!--
 		<ul>
 			<li>
 				<span><i class="icon-folder-open"></i> Parent</span> <a href="">Goes somewhere</a>
@@ -155,6 +225,7 @@
 				</ul>
 			</li>
 		</ul>
+		-->
 	</div>
 </body>
 </html>
