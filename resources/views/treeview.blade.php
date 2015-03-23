@@ -1,11 +1,12 @@
-<html>
+<html ng-app="owl">
 <head>
 	<title>TreeView Spike</title>
 	<link rel="stylesheet" type="text/css" href={{ URL::asset('css/style.css') }}>
 	<link rel="stylesheet" type="text/css" href={{ URL::asset('css/bootstrap-combined.min.css') }}>
 	<script src={{ URL::asset('js/jquery/jquery-2.1.3.min.js') }}></script>
 	<script src={{ URL::asset('js/bootstrap.min.js') }}></script>
-
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
 	<script type="text/javascript">
 		$(function () {
 			$('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
@@ -21,90 +22,106 @@
 				e.stopPropagation();
 			});
 		});
+
+
+		window.onload = function start() {
+			//myLoop();
+		}
+		
+		var i = 1;
+
+		function myLoop () {           //  create a loop function
+		   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
+	         //  your code here
+		      i++;                     //  increment the counter
+		      if (i < 10) {            //  if the counter < 10, call the loop function
+		         myLoop();             //  ..  again which will trigger another 
+		      }                        //  ..  setTimeout()
+		  }, 3000)
+		}
 	</script>
 </head>
-<body>
-
-
+<body ng-controller="TreeviewController">
+	<p>[[output]]</p>
 	<div class="tree well">
-	<?php 
+		<?php 
 
-$items = Array
-(
-    Array
-    (
-        'id' => 1,
-        'title' => 'menu1',
-        'parent_id' => 0
-    ),
-    Array
-    (
-        'id' => 2,
-        'title' => 'submenu1-1',
-        'parent_id' => 1
-    ),
-    Array
-    (
-        'id' => 3,
-        'title' => 'submenu1-2',
-        'parent_id' => 1
-    ),
-    Array
-    (
-        'id' => 4,
-        'title' => 'menu2',
-        'parent_id' => 0
-    ),
-    Array
-    (
-        'id' => 5,
-        'title' => 'submenu2-1',
-        'parent_id' => 4
-    ),
-    Array
-    (
-        'id' => 6,
-        'title' => 'submenu3-1',
-        'parent_id' => 3
-    )
-);
+		$items = Array
+		(
+			Array
+			(
+				'id' => 1,
+				'title' => 'menu1',
+				'parent_id' => 0
+				),
+			Array
+			(
+				'id' => 2,
+				'title' => 'submenu1-1',
+				'parent_id' => 1
+				),
+			Array
+			(
+				'id' => 3,
+				'title' => 'submenu1-2',
+				'parent_id' => 1
+				),
+			Array
+			(
+				'id' => 4,
+				'title' => 'menu2',
+				'parent_id' => 0
+				),
+			Array
+			(
+				'id' => 5,
+				'title' => 'submenu2-1',
+				'parent_id' => 4
+				),
+			Array
+			(
+				'id' => 6,
+				'title' => 'submenu3-1',
+				'parent_id' => 3
+				)
+			);
 
 //index elements by id
-foreach ($items as $item) {
-    $item['subs'] = array();
-    $indexedItems[$item['id']] = (object) $item;
-}
+		foreach ($items as $item) {
+			$item['subs'] = array();
+			$indexedItems[$item['id']] = (object) $item;
+		}
 
 
 //assign to parent
-$topLevel = array();
-foreach ($indexedItems as $item) {
-    if ($item->parent_id == 0) {
-        $topLevel[] = $item;
-    } else {
-        $indexedItems[$item->parent_id]->subs[] = $item;
-    }
-}
+		$topLevel = array();
+		foreach ($indexedItems as $item) {
+			if ($item->parent_id == 0) {
+				$topLevel[] = $item;
+			} else {
+				$indexedItems[$item->parent_id]->subs[] = $item;
+			}
+		}
 
 //recursive function
-function renderMenu($items) {
-    $render = '<ul>';
+		function renderMenu($items) {
+			$render = '<ul>';
 
-    foreach ($items as $item) {
-        $render .= '<li><span>' . $item->title . '</span>';
-        if (!empty($item->subs)) {
-            $render .= renderMenu($item->subs);
-        }
-        $render .= '</li>';
-    }
+			foreach ($items as $item) {
+				$render .= '<li><span>' . $item->title . '</span>';
+				if (!empty($item->subs)) {
+					$render .= renderMenu($item->subs);
+				}
+				$render .= '</li>';
+			}
 
-    return $render . '</ul>';
-   
-}
+			return $render . '</ul>';
 
-echo renderMenu($topLevel);
+		}
 
-?>
+		echo renderMenu($topLevel);
+
+		?>
 <!--
 		<ul>
 			<li>
@@ -226,16 +243,39 @@ echo renderMenu($topLevel);
 				</ul>
 			</li>
 		</ul>
-		-->
+	-->
 
-		<?php 
-		$oldcwd = getcwd();
+	<?php
+/*
+		$cmd = "java -jar phpOut.jar";
+		$outputfile = "OUTPUT";
+		$pidArr = array();
+		exec(sprintf("%s > %s 2>&1 & echo $!", $cmd, $outputfile),$pidArr);
 
-		 exec('java -jar myjar.jar', $output);
-		 foreach($output as $out) {
+		function isRunning($pid){
+		    try{
+		        $result = shell_exec(sprintf("ps %d", $pid));
+		        if( count(preg_split("/\n/", $result)) > 2){
+		            return true;
+		        }
+		    }catch(Exception $e){}
 
-		echo $out;
-	};
+		    return false;
+		}
+		
+		if(isRunning($pidArr[0])){
+			echo "Loading tree..";
+		}*/
+
+		/*
+		while(isRunning($pidArr[0])){
+			echo ".";
+			ob_flush(); flush();
+			sleep(1);
+		}*/
+
+
+		
 		
 		//array to string
 
@@ -249,7 +289,7 @@ echo renderMenu($topLevel);
  // chdir($oldcwd); 
 
 //$output = exec('java -jar C:/agent.jar', $output);
- 
+
 //shell_exec('java -jar C:/agent.jar')
 			//$output =	shell_exec("java -jar agent.jar server");
 //system("c:\\agent.jar\");

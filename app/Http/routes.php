@@ -19,9 +19,11 @@ Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
 ]);
-
+/*
 Route::get('users', function(){
 	return 'Users! Noob és tu  !';
-});
+});*/
 
 Route::get('treeview', 'TreeViewController@index');
+
+Route::get('getInitialTree', 'TreeViewController@getInitialTree');

@@ -33,4 +33,40 @@ class TreeViewController extends Controller {
 		return view('treeview');
 	}
 
+	public function getInitialTree()
+	{
+		$cmd = "java -jar phpOut.jar";
+		$outputfile = "OUTPUT";
+		$pidArr = array();
+		exec(sprintf("%s > %s 2>&1 & echo $!", $cmd, $outputfile),$pidArr);
+
+		function isRunning($pid){
+			try{
+				$result = shell_exec(sprintf("ps %d", $pid));
+				if( count(preg_split("/\n/", $result)) > 2){
+					return true;
+				}
+			}catch(Exception $e){}
+
+			return false;
+		}
+
+		while(isRunning($pidArr[0])){
+			sleep(1);
+		}
+
+		$output = array();
+		
+		$handle = fopen($outputfile, "r");
+		if ($handle) {
+			while (($line = fgets($handle)) !== false) {
+				array_push($output, array('line1' => $line));
+			}
+			fclose($handle);
+		} else {
+			array_push($output, array('line1' => "Error openning output file"));
+		} 
+		
+		return Response::json($output);
+	}
 }
