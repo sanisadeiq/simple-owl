@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<thing>
+    <class>
+        <name>Curso</name>
+        <parentClass>Thing</parentClass>
+        
+        <individuals>
+        
+            <individual>
+                <name>Rafael</name>
+                <relationships>
+                    <relationship>
+                        <name>éAmigoDe</name>
+                        <value>David</value>
+                    </relationship>
+                </relationships>
+            </individual>
+            
+            <individual>
+                <name>Nelson</name>
+                <relationships>
+                    <relationship>
+                        <name>éAmigoDe</name>
+                        <value>Rafael</value>
+                    </relationship>
+                </relationships>
+            </individual>
+            
+            <individual>
+                <name>David</name>
+                <relationships>
+                    <relationship>
+                        <name>éAmigoDe</name>
+                    </relationship>
+                </relationships>
+            </individual>
+        </individuals>
+        
+        <necessaryConditions>
+            <condition>adult</condition>
+            <value>18</value>
+            <operator>></operator>
+        </necessaryConditions>
+        
+        <sufficientConditions>
+            <condition>frequentaCurso</condition>
+            <value>cursoMestrado</value>
+            <operator>some</operator>
+        </sufficientConditions>
+    
+    </class>
+</thing>
+

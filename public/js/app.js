@@ -4,32 +4,18 @@
 		$interpolateProvider.startSymbol('[[').endSymbol(']]');
 	});
 
-	app.controller('TreeviewController', function($scope, $http){
-		$http({method: 'GET', url: 'getInitialTree'}).
+	app.controller('TreeviewController',['$http', function($http){
+		var tree = this;
+		$http({method: 'GET', url: '/getInitialTree'}).
 		success(function(data, status, headers, config) {
 			alert('no error');
-			$scope.output = data;
+			//$scope.output = data[0] + data[1];
+			tree.output = data[0] + data[1];
 		}).
 		error(function(data, status, headers, config) {
 			alert('error');
-			$scope.output = data 
-			+status  
-			+headers   
-			+config;
+			tree.output = data+status+headers+config;
 		});
-	});
-
-/*
-	$scope.output = "asd";
-	function TreeviewController($scope, $http){
-		$http({method: 'GET', url: 'getInitialTree'}).
-		success(function(data, status, headers, config) {
-			$scope.output = data;
-		}).
-		error(function(data, status, headers, config) {
-			alert("hello");
-			$scope.output = data;
-		});
-	}
-*/
+	}]);
+	
 })();

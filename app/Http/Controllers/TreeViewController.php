@@ -60,13 +60,13 @@ class TreeViewController extends Controller {
 		$handle = fopen($outputfile, "r");
 		if ($handle) {
 			while (($line = fgets($handle)) !== false) {
-				array_push($output, array('line1' => $line));
+				array_push($output, $line);
 			}
 			fclose($handle);
 		} else {
-			array_push($output, array('line1' => "Error openning output file"));
+			array_push($output, "Error openning output file");
 		} 
-		
-		return Response::json($output);
+
+		return $output;
 	}
 }

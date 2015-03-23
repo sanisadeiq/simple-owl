@@ -41,8 +41,8 @@
 		}
 	</script>
 </head>
-<body ng-controller="TreeviewController">
-	<p>[[output]]</p>
+<body ng-controller="TreeviewController as treeviewCtrl">
+	<p>[[treeviewCtrl.output]]</p>
 	<div class="tree well">
 		<?php 
 
