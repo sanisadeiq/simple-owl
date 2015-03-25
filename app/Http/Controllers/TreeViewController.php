@@ -30,7 +30,75 @@ class TreeViewController extends Controller {
 	 */
 	public function index()
 	{
-		return view('treeview');
+
+		$xml = simplexml_load_file("example.xml") or die("Error: Cannot create object");
+
+		$i = 1;
+		$ids = array();
+		$ids['Thing'] = 0;
+		$results = array();
+
+		foreach ($xml->class as $class) {
+			$ids[sprintf('%s', $class->name)] = $i;
+			$i++;
+		}
+
+		foreach ($xml->children() as $class) {
+			//echo sprintf('CLASS: %s', $class->name) . "<br>";
+			array_push($results, Array(
+				'id' => $ids[sprintf('%s', $class->name)],
+				'title' => $class->name . "",
+				'parent_id' => $ids[sprintf('%s', $class->parentClass)]
+				));
+			foreach ($class->individuals as $inds) {
+				foreach ($inds->children() as $ind) {
+					//echo sprintf('CLASS: %s -> INDIVIDUAL: %s', $class->name, $ind->name) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $ind->name . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$lastInd = $i;
+					$i++;
+					foreach ($ind->relationships as $rels) {
+						foreach ($rels->children() as $rel) {
+							//echo sprintf('CLASS: %s -> INDIVIDUAL: %s -> RELATIONSHIP: %s',
+							 //$class->name, $ind->name, $rel->name) . "<br>";
+							array_push($results, Array(
+								'id' => $i,
+								'title' => $rel->name . "",
+								'parent_id' => $lastInd
+								));
+							$i++;
+						}
+					}
+				}
+			}
+			foreach ($class->necessaryConditions as $necs) {
+				foreach ($necs->children() as $nec) {
+					//echo sprintf('CLASS: %s -> NECCONDITION: %s', $class->name, $nec->condition) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $nec->condition . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$i++;
+				}
+			}
+			foreach ($class->sufficientConditions as $sufs) {
+				foreach ($sufs->children() as $suf) {
+					//echo sprintf('CLASS: %s -> SUFCONDITION: %s', $class->name, $suf->condition) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $suf->condition . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$i++;
+				}
+			}
+		}
+
+		return view('treeview', ['items' => $results]);
 	}
 
 	public function getInitialTree()
@@ -55,6 +123,73 @@ class TreeViewController extends Controller {
 			sleep(1);
 		}
 
+		$xml = simplexml_load_file("example.xml") or die("Error: Cannot create object");
+
+		$i = 1;
+		$ids = array();
+		$ids['Thing'] = 0;
+		$results = array();
+
+		foreach ($xml->class as $class) {
+			$ids[sprintf('%s', $class->name)] = $i;
+			$i++;
+		}
+
+		foreach ($xml->children() as $class) {
+			//echo sprintf('CLASS: %s', $class->name) . "<br>";
+			array_push($results, Array(
+				'id' => $ids[sprintf('%s', $class->name)],
+				'title' => $class->name . "",
+				'parent_id' => $ids[sprintf('%s', $class->parentClass)]
+				));
+			foreach ($class->individuals as $inds) {
+				foreach ($inds->children() as $ind) {
+					//echo sprintf('CLASS: %s -> INDIVIDUAL: %s', $class->name, $ind->name) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $ind->name . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$lastInd = $i;
+					$i++;
+					foreach ($ind->relationships as $rels) {
+						foreach ($rels->children() as $rel) {
+							//echo sprintf('CLASS: %s -> INDIVIDUAL: %s -> RELATIONSHIP: %s',
+							 //$class->name, $ind->name, $rel->name) . "<br>";
+							array_push($results, Array(
+								'id' => $i,
+								'title' => $rel->name . "",
+								'parent_id' => $lastInd
+								));
+							$i++;
+						}
+					}
+				}
+			}
+			foreach ($class->necessaryConditions as $necs) {
+				foreach ($necs->children() as $nec) {
+					//echo sprintf('CLASS: %s -> NECCONDITION: %s', $class->name, $nec->condition) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $nec->condition . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$i++;
+				}
+			}
+			foreach ($class->sufficientConditions as $sufs) {
+				foreach ($sufs->children() as $suf) {
+					//echo sprintf('CLASS: %s -> SUFCONDITION: %s', $class->name, $suf->condition) . "<br>";
+					array_push($results, Array(
+						'id' => $i,
+						'title' => $suf->condition . "",
+						'parent_id' => $ids[sprintf('%s', $class->name)]
+						));
+					$i++;
+				}
+			}
+		}
+/*
 		$output = array();
 		
 		$handle = fopen($outputfile, "r");
@@ -66,7 +201,7 @@ class TreeViewController extends Controller {
 		} else {
 			array_push($output, "Error openning output file");
 		} 
-
-		return $output;
+*/
+		return $results;
 	}
 }

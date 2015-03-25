@@ -22,30 +22,16 @@
 				e.stopPropagation();
 			});
 		});
-
-
-		window.onload = function start() {
-			//myLoop();
-		}
-		
-		var i = 1;
-
-		function myLoop () {           //  create a loop function
-		   setTimeout(function () {    //  call a 3s setTimeout when the loop is called
-	         //  your code here
-		      i++;                     //  increment the counter
-		      if (i < 10) {            //  if the counter < 10, call the loop function
-		         myLoop();             //  ..  again which will trigger another 
-		      }                        //  ..  setTimeout()
-		  }, 3000)
-		}
 	</script>
 </head>
-<body ng-controller="TreeviewController as treeviewCtrl">
-	<p>[[treeviewCtrl.output]]</p>
+<body>
+	<div ng-controller="TreeviewController as treeviewCtrl">
+		<p>[[treeviewCtrl.array]]</p>
+  		<collection collection='treeviewCtrl.array'></collection>
+ 	</div>
 	<div class="tree well">
 		<?php 
-
+/*
 		$items = Array
 		(
 			Array
@@ -84,7 +70,7 @@
 				'title' => 'submenu3-1',
 				'parent_id' => 3
 				)
-			);
+			);*/
 
 //index elements by id
 		foreach ($items as $item) {

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <thing>
-    <class>
+	<class>
         <name>Curso</name>
         <parentClass>Thing</parentClass>
+	</class>	
+    <class>
+        <name>CursoMEICM</name>
+        <parentClass>Curso</parentClass>
         
         <individuals>
         
@@ -37,17 +41,31 @@
         </individuals>
         
         <necessaryConditions>
-            <condition>adult</condition>
-            <value>18</value>
-            <operator>></operator>
+            <necessaryCondition>
+                <condition>adult</condition>
+                <value>18</value>
+                <operator>></operator>
+            </necessaryCondition>
+
+            <necessaryCondition>
+                <condition>hasDegree</condition>
+                <value>Curso</value>
+                <operator>>some</operator>
+            </necessaryCondition>
         </necessaryConditions>
         
         <sufficientConditions>
-            <condition>frequentaCurso</condition>
-            <value>cursoMestrado</value>
-            <operator>some</operator>
+            <sufficientCondition>
+                <condition>frequentaCurso</condition>
+                <value>cursoMestrado</value>
+                <operator>some</operator>
+            </sufficientCondition>
         </sufficientConditions>
     
+    </class>
+    <class>
+        <name>CursoEI</name>
+        <parentClass>Curso</parentClass>
     </class>
 </thing>
 
