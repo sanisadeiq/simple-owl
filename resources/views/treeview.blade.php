@@ -77,5 +77,6 @@
 	<div class="tree well" ng-controller="TreeviewController as treeviewCtrl">
   		<collection collection='treeviewCtrl.array'></collection>
  	</div>
+ 	
 </body>
 </html>
