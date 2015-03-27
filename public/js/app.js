@@ -22,24 +22,35 @@
 			scope: {
 				member: '='
 			},
-			template: "<li>[[member.title]]</li>",
+			template: "<li class='parent_li' ng-show='member.active'><span ng-click='onClick(member)'>[[member.title]]</span></li>",
 			link: function (scope, element, attrs) {
-				if (angular.isArray(scope.member.children)) {
-					element.append("<collection collection='member.children'></collection>"); 
-					$compile(element.contents())(scope)
-				}
-			}
-		}
-	})
+				//if (angular.isArray(scope.member.subs)) {
+					//element.append("<collection collection='member.subs'></collection>"); 
+					//$compile(element.contents())(scope)
+					$compile('<collection collection="member.subs"></collection>')(scope, function(cloned, scope){
+						element.append(cloned); 
+					});
+				//}
+                scope.onClick  = function (member) {
+                    //alert('asdasd');
+                    //console.log(member.subs);
+                    for (var i = member.subs.length - 1; i >= 0; i--) {
+                        member.subs[i].active = !member.subs[i].active;
+                    };
+                };
+            }
+        }
+    })
 
 
-	app.controller('TreeviewController',['$http', function($http){
-		var tree = this;
+app.controller('TreeviewController',['$http', function($http){
+  var tree = this;
 		//$scope.array = [];
 		$http({method: 'GET', url: '/getInitialTree'}).
 		success(function(data, status, headers, config) {
 			alert('no error');
 			tree.array = data;
+            console.log(data);
 			//$scope.array = data;
 		}).
 		error(function(data, status, headers, config) {
@@ -48,5 +59,5 @@
 			//$scope.array = data+status+headers+config;
 		});
 	}]);
-	
+
 })();

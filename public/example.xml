@@ -1,71 +1,47 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <thing>
-	<class>
-        <name>Curso</name>
-        <parentClass>Thing</parentClass>
-	</class>	
-    <class>
-        <name>CursoMEICM</name>
-        <parentClass>Curso</parentClass>
-        
-        <individuals>
-        
-            <individual>
-                <name>Rafael</name>
-                <relationships>
-                    <relationship>
-                        <name>éAmigoDe</name>
-                        <value>David</value>
-                    </relationship>
-                </relationships>
-            </individual>
-            
-            <individual>
-                <name>Nelson</name>
-                <relationships>
-                    <relationship>
-                        <name>éAmigoDe</name>
-                        <value>Rafael</value>
-                    </relationship>
-                </relationships>
-            </individual>
-            
-            <individual>
-                <name>David</name>
-                <relationships>
-                    <relationship>
-                        <name>éAmigoDe</name>
-                    </relationship>
-                </relationships>
-            </individual>
-        </individuals>
-        
-        <necessaryConditions>
-            <necessaryCondition>
-                <condition>adult</condition>
-                <value>18</value>
-                <operator>></operator>
-            </necessaryCondition>
+	<class name="Curso" parent="Thing"> 
+	</class>
 
-            <necessaryCondition>
-                <condition>hasDegree</condition>
-                <value>Curso</value>
-                <operator>>some</operator>
-            </necessaryCondition>
-        </necessaryConditions>
+    <class name="CursoMEICM" parent="Curso">
+
+        <individual name="Rafael">
+            <relationship name="éAmigoDe">David</relationship>
+        </individual>
         
-        <sufficientConditions>
-            <sufficientCondition>
-                <condition>frequentaCurso</condition>
-                <value>cursoMestrado</value>
-                <operator>some</operator>
-            </sufficientCondition>
-        </sufficientConditions>
-    
+        <individual name="Nelson">
+                <relationship name="éAmigoDe">Rafael</relationship>
+        </individual>
+        
+        <individual name="David">
+                <relationship name="éAmigoDe"></relationship>
+        </individual>
+
+        <necessaryCondition name="adult">
+            <operator>></operator>
+            <value>18</value>
+        </necessaryCondition>
+
+        <necessaryCondition name="hasDegree">
+            <operator>>some</operator>
+            <value>Curso</value>
+        </necessaryCondition>
+
+        <sufficientCondition name="frequentaCurso">
+            <operator>some</operator>
+            <value>cursoMestrado</value>
+        </sufficientCondition>
+
     </class>
-    <class>
-        <name>CursoEI</name>
-        <parentClass>Curso</parentClass>
+        
+    <class name="CursoEI" parent="Curso">
     </class>
+
+    <class name="CursoJogos" parent="CursoEI">
+    </class>
+
+    <class name="CursoJogosMoveis" parent="CursoJogos">
+    </class>
+
 </thing>
 

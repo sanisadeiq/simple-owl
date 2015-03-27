@@ -1,3 +1,84 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: beige;
+}
+
+h1, #query-area {
+	text-align: center;
+}
+
+.query-title {
+	background-color: rgb(245,152,41);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	display: inline-block;
+	font-weight: bold;
+	width: 200px;
+}
+
+#swrl-query {
+	display: inline-block;
+	margin-top: 15px;
+	width: 800px;
+}
+
+#query-title {
+	float: left;
+	font-weight: bold;
+}
+
+input[type="submit"] {
+	outline: none;
+	display: block;
+    left: 0;
+    margin-left: auto;
+  	margin-right: auto;
+  	position: absolute;
+  	right: 0;
+}
+
+#upload-button, #undo-button, #query-button {
+    border: none;
+    height: 48px;
+    width: 48px;
+}
+
+#upload-button {
+	background: url("../img/upload.png");
+	left: 1000;
+	top: 69;
+}
+
+#undo-button {
+	background: url("../img/undo.png");
+	left: 1000;
+	top: 129;
+}
+
+#query-button {
+    background: url("../img/query.png");
+    left: 1000;
+	top: 189;
+}
+
+/* Fixes and adjustments for Bootstrap Multiselect */
+.btn.btn-default.multiselect-clear-filter {
+  padding: 9px 12px;
+}
+
+.multiselect.dropdown-toggle.btn.btn-default {
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	background-color: darkseagreen;
+}
+
+.multiselect.dropdown-toggle.btn.btn-default.disabled {
+	background-color: darksalmon;
+}
 .tree {
 	min-height:20px;
 	padding:19px;
