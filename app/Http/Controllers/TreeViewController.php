@@ -4,12 +4,10 @@ class TreeViewController extends Controller {
 
 	/*
 	|--------------------------------------------------------------------------
-	| Home Controller
+	| TreeView Controller
 	|--------------------------------------------------------------------------
 	|
-	| This controller renders your application's "dashboard" for users that
-	| are authenticated. Of course, you are free to change or remove the
-	| controller as you wish. It is just here to get your app started!
+	| This controller handles the XML parsing and sends the result to the page.
 	|
 	*/
 
@@ -20,78 +18,18 @@ class TreeViewController extends Controller {
 	 */
 	public function __construct()
 	{
-		$this->middleware('guest');
+		// I believe this restricts the access only to guests, therefore it's commented.
+		//$this->middleware('guest');
 	}
 
 	/**
-	 * Show the application dashboard to the user.
+	 * Parse the XML.
 	 *
 	 * @return Response
 	 */
 	public function index()
 	{
-		
-		$xml = simplexml_load_file("example.xml") or die("Error: Cannot create object");
-
-		$i = 1;
-		$ids = array();
-		$ids['Thing'] = 0;
-		$items = array();
-
-		foreach ($xml->class as $class) {
-			//print_r($class['name'.""]. '<br>');
-			$ids[$class['name'].""] = $i;
-			$i++;
-		}
-
-		foreach ($xml->class as $class) {
-			//echo sprintf('parent: %s', $class['parent']) . "<br>";
-			array_push($items, Array(
-				'id' => $ids[$class['name'].""],
-				'title' => $class['name'] . "",
-				'parent_id' => $ids[$class['parent'].""]
-				));
-			foreach ($class->individual as $ind) {
-				//echo sprintf('CLASS: %s -> INDIVIDUAL: %s', $class->name, $ind->name) . "<br>";
-				array_push($items, Array(
-					'id' => $i,
-					'title' => $ind['name'] . "",
-					'parent_id' => $ids[$class['name'].""]
-					));
-				$lastInd = $i;
-				$i++;
-				foreach ($ind->relationship as $rel) {
-					//echo sprintf('CLASS: %s -> INDIVIDUAL: %s -> RELATIONSHIP: %s',
-					 //$class->name, $ind->name, $rel->name) . "<br>";
-					array_push($items, Array(
-						'id' => $i,
-						'title' => $rel['name'] . " " . $rel,
-						'parent_id' => $lastInd
-						));
-					$i++;
-				}
-			}
-			foreach ($class->necessaryCondition as $nec) {
-				//echo sprintf('CLASS: %s -> NECCONDITION: %s', $class->name, $nec->condition) . "<br>";
-				array_push($items, Array(
-					'id' => $i,
-					'title' => $nec['name'] . "",
-					'parent_id' => $ids[sprintf('%s', $class['name'])]
-					));
-				$i++;
-			}
-			foreach ($class->sufficientCondition as $suf) {
-				//echo sprintf('CLASS: %s -> SUFCONDITION: %s', $class->name, $suf->condition) . "<br>";
-				array_push($items, Array(
-					'id' => $i,
-					'title' => $suf['name'] . "",
-					'parent_id' => $ids[sprintf('%s', $class['name'])]
-					));
-				$i++;
-			}
-		}
-
-		return view('treeview', ['items' => $items]);
+		return view('treeview');
 	}
 
 	public function getInitialTree()
