@@ -33,10 +33,10 @@
 		<input id="undo-button" type="submit" value="" onclick="rebuildQuery()">
 
 		<div id="query-titles">
-			<div class="query-title">CLASSES</div>
-			<div class="query-title">INDIVIDUALS</div>
-			<div class="query-title">RELATIONSHIPS</div>
-			<div class="query-title">OPERATORS</div>
+			<div class="query-title class">CLASSES</div>
+			<div class="query-title individual">INDIVIDUALS</div>
+			<div class="query-title relationship">RELATIONSHIPS</div>
+			<div class="query-title operators">OPERATORS</div>
 		</div>
 
 		<div id="query-boxes">

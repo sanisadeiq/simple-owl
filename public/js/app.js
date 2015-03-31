@@ -22,7 +22,7 @@
 			scope: {
 				member: '='
 			},
-			template: "<li class='parent_li' ng-show='member.active'><span ng-click='onClick(member)'>[[member.title]]</span></li>",
+			template: "<li class='parent_li' ng-show='member.active'><span class='[[member.type]]' ng-click='onClick(member)'>[[member.title]]</span></li>",
 			link: function (scope, element, attrs) {
 				//if (angular.isArray(scope.member.subs)) {
 					//element.append("<collection collection='member.subs'></collection>"); 

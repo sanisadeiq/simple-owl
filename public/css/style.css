@@ -84,6 +84,10 @@ input[type="submit"] {
 	background-color: darksalmon;
 }
 
+.parent_li {
+	font-weight: bold;
+}
+
 .tree {
 	background-color:#fbfbfb;
 	margin-left: 2px;
@@ -145,4 +149,28 @@ input[type="submit"] {
 	background:#eee;
 	border:1px solid #94a0b4;
 	color:#000
+}
+
+.class {
+	background-color: rgb(245,152,41);
+}
+
+.individual {
+	background-color: skyblue;
+}
+
+.relationship {
+	background-color: darkkhaki;
+}
+
+.necessaryCondition {
+	background-color: darksalmon;
+}
+
+.sufficientCondition {
+	background-color: gold;
+}
+
+.operators {
+	background-color: darkgray;
 }

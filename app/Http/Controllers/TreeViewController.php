@@ -54,7 +54,9 @@ class TreeViewController extends Controller {
 			sleep(1);
 		}
 
-				$xml = simplexml_load_file("example.xml") or die("Error: Cannot create object");
+
+
+		$xml = simplexml_load_file("example.xml") or die("Error: Cannot create object");
 
 		$i = 1;
 		$ids = array();
@@ -73,18 +75,23 @@ class TreeViewController extends Controller {
 				'id' => $ids[$class['name'].""],
 				'title' => $class['name'] . "",
 				'parent_id' => $ids[$class['parent'].""],
-				'active' => true
-				));
+				'active' => true,
+				'type' => 'class'
+			));
+
 			foreach ($class->individual as $ind) {
 				//echo sprintf('CLASS: %s -> INDIVIDUAL: %s', $class->name, $ind->name) . "<br>";
 				array_push($items, Array(
 					'id' => $i,
 					'title' => $ind['name'] . "",
 					'parent_id' => $ids[$class['name'].""],
-				'active' => true
-					));
+					'active' => true,
+					'type' => 'individual'
+				));
+
 				$lastInd = $i;
 				$i++;
+
 				foreach ($ind->relationship as $rel) {
 					//echo sprintf('CLASS: %s -> INDIVIDUAL: %s -> RELATIONSHIP: %s',
 					 //$class->name, $ind->name, $rel->name) . "<br>";
@@ -92,29 +99,37 @@ class TreeViewController extends Controller {
 						'id' => $i,
 						'title' => $rel['name'] . " " . $rel,
 						'parent_id' => $lastInd,
-						'active' => true
-						));
+						'active' => true,
+						'type' => 'relationship'
+					));
+
 					$i++;
 				}
 			}
+
 			foreach ($class->necessaryCondition as $nec) {
 				//echo sprintf('CLASS: %s -> NECCONDITION: %s', $class->name, $nec->condition) . "<br>";
 				array_push($items, Array(
 					'id' => $i,
 					'title' => $nec['name'] . "",
 					'parent_id' => $ids[sprintf('%s', $class['name'])],
-					'active' => true
-					));
+					'active' => true,
+					'type' => 'necessaryCondition'
+				));
+
 				$i++;
 			}
+
 			foreach ($class->sufficientCondition as $suf) {
 				//echo sprintf('CLASS: %s -> SUFCONDITION: %s', $class->name, $suf->condition) . "<br>";
 				array_push($items, Array(
 					'id' => $i,
 					'title' => $suf['name'] . "",
 					'parent_id' => $ids[sprintf('%s', $class['name'])],
-					'active' => true
-					));
+					'active' => true,
+					'type' => 'sufficientCondition'
+				));
+
 				$i++;
 			}
 		}
@@ -124,9 +139,9 @@ class TreeViewController extends Controller {
 			$indexedItems[$item['id']] = (object) $item;
 		}
 
-
-		//assign to parent
+		// assign to parent
 		$topLevel = array();
+
 		foreach ($indexedItems as $item) {
 			if ($item->parent_id == 0) {
 				$topLevel[] = $item;
@@ -137,4 +152,6 @@ class TreeViewController extends Controller {
 
 		return $topLevel;
 	}
+
+	
 }
