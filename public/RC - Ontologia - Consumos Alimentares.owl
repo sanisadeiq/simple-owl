@@ -1,0 +1,1176 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2011/4/Ontology1306707127855.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2011/4/Ontology1306707127855.owl"
+     versionIRI="http://www.semanticweb.org/ontologies/2011/4/Ontology1306707086385.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Acucarado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Apresentacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bebida"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cacau"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Caracteristica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Carne"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarneBranca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CarneVermelha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cereal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassesAuxiliares"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClassificacaoDietetica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Comida"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Confecao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Consumo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Corte"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Embalagem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Extrinseca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Frango"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fruta"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gordura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Horticola"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intrinseca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lacteo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Lata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Leguminoso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Marca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OndeEServido"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pacote"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ParteDeOrigem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PastilhaOuRebucado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Peixe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PlantaAromatica"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Porco"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Preparacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Receita"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Refrigerante"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sabor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sobremesa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sopa"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sumo"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TipoDeCombinacao"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnidadeDeMedida"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vaca"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vegetal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vinho"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eAvoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eFilhoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eIrmaoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eMarcaDoProduto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ePaiDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eProdutoDaMarca"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temClassificacaoDietetica"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temCor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temCorte"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temEmbalagem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temGordura"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temParteDeOrigem"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temPreparacao"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#temSabor"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eCurado"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eDoce"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#eLiquido"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temAcucar"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temAlcool"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temConcentracao"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temGas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Alvarinho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ArrozDoce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cartao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Compal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompalAlpercePacote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompalAnanasPacote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompalClassic0.20cl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompalLight0.20cl"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CompalLightPacote"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DoceDaAvo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FebraAoPiripiri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HallsMentolSemAcucar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Iogurte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MenuEntremeada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Porto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#QueijoCurado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Saltal"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SaltalLightPessego"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemiFrioDeAnanas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SumoFrescoLaranja"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#acucar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alperce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ananas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#anodeproducao"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#arroz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#banana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#baunilha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bife"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bolo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#branco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cabeca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cocacola"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#compala"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#costoleta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cozido"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dose"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#entrecosto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#entremeada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#espetada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fatia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#febra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#filete"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#frito"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fruta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#gordo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#grelhado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#idade"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#light"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lombo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#maca"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#macedonia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#magro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#meiogordo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#menta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#misto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mousse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#papaia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pastilha"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#perna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#peso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pessego"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#preto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pudim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rebucado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#recheado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restaurante"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#salada"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#semi-frio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#simples"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tarte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tetrabrick"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tinto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#verde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#vermelho"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#volume"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#PastilhaOuRebucado"/>
+        <DataHasValue>
+            <DataProperty IRI="#temAcucar"/>
+            <Literal datatypeIRI="&xsd;boolean">false</Literal>
+        </DataHasValue>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Porco"/>
+        <ObjectUnionOf>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#temCorte"/>
+                <NamedIndividual IRI="#febra"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#temParteDeOrigem"/>
+                <NamedIndividual IRI="#entrecosto"/>
+            </ObjectHasValue>
+            <ObjectHasValue>
+                <ObjectProperty IRI="#temParteDeOrigem"/>
+                <NamedIndividual IRI="#entremeada"/>
+            </ObjectHasValue>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Refrigerante"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#temEmbalagem"/>
+            <Class IRI="#Lata"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Refrigerante"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#temEmbalagem"/>
+            <Class IRI="#Lata"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sabor"/>
+        <ObjectUnionOf>
+            <Class IRI="#Cor"/>
+            <Class IRI="#Fruta"/>
+            <Class IRI="#PlantaAromatica"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sobremesa"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#eDoce"/>
+            <Datatype abbreviatedIRI="rdfs:Literal"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sumo"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#temSabor"/>
+                <Class IRI="#Fruta"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#temConcentracao"/>
+                <Datatype abbreviatedIRI="rdfs:Literal"/>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sumo"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#temSabor"/>
+            <Class IRI="#Fruta"/>
+        </ObjectAllValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Vinho"/>
+        <ObjectHasValue>
+            <ObjectProperty IRI="#temCor"/>
+            <NamedIndividual IRI="#tinto"/>
+        </ObjectHasValue>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Acucarado"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Animal"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Apresentacao"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bebida"/>
+        <Class IRI="#Consumo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bebida"/>
+        <DataHasValue>
+            <DataProperty IRI="#eLiquido"/>
+            <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cacau"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Caracteristica"/>
+        <Class IRI="#ClassesAuxiliares"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Carne"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarneBranca"/>
+        <Class IRI="#Carne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CarneVermelha"/>
+        <Class IRI="#Carne"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cereal"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClassificacaoDietetica"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Comida"/>
+        <Class IRI="#Consumo"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Confecao"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Cor"/>
+        <Class IRI="#Intrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Corte"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Embalagem"/>
+        <Class IRI="#ClassesAuxiliares"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Extrinseca"/>
+        <Class IRI="#Caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Frango"/>
+        <Class IRI="#CarneBranca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fruta"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gordura"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Horticola"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intrinseca"/>
+        <Class IRI="#Caracteristica"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lacteo"/>
+        <Class IRI="#Bebida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Lata"/>
+        <Class IRI="#Embalagem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Leguminoso"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Marca"/>
+        <Class IRI="#ClassesAuxiliares"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OndeEServido"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pacote"/>
+        <Class IRI="#Embalagem"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ParteDeOrigem"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PastilhaOuRebucado"/>
+        <Class IRI="#Acucarado"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Peixe"/>
+        <Class IRI="#Animal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PlantaAromatica"/>
+        <Class IRI="#Vegetal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Porco"/>
+        <Class IRI="#CarneVermelha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Preparacao"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Receita"/>
+        <Class IRI="#Intrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Refrigerante"/>
+        <Class IRI="#Bebida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Refrigerante"/>
+        <DataHasValue>
+            <DataProperty IRI="#temGas"/>
+            <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sabor"/>
+        <Class IRI="#Intrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sobremesa"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sopa"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sumo"/>
+        <Class IRI="#Bebida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TipoDeCombinacao"/>
+        <Class IRI="#Extrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnidadeDeMedida"/>
+        <Class IRI="#Intrinseca"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vaca"/>
+        <Class IRI="#CarneVermelha"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vegetal"/>
+        <Class IRI="#Comida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vinho"/>
+        <Class IRI="#Bebida"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vinho"/>
+        <DataHasValue>
+            <DataProperty IRI="#temAlcool"/>
+            <Literal datatypeIRI="&xsd;boolean">true</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Extrinseca"/>
+        <Class IRI="#Intrinseca"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Vinho"/>
+        <NamedIndividual IRI="#Alvarinho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#ArrozDoce"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pacote"/>
+        <NamedIndividual IRI="#Cartao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Marca"/>
+        <NamedIndividual IRI="#Compal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#CompalAlpercePacote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#CompalAnanasPacote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#CompalClassic0.20cl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#CompalLight0.20cl"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#CompalLightPacote"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#DoceDaAvo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#FebraAoPiripiri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#HallsMentolSemAcucar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lacteo"/>
+        <NamedIndividual IRI="#Iogurte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#MenuEntremeada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Vinho"/>
+        <NamedIndividual IRI="#Porto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Lacteo"/>
+        <NamedIndividual IRI="#QueijoCurado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Marca"/>
+        <NamedIndividual IRI="#Saltal"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#SaltalLightPessego"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#SemiFrioDeAnanas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sumo"/>
+        <NamedIndividual IRI="#SumoFrescoLaranja"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Acucarado"/>
+        <NamedIndividual IRI="#acucar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#alperce"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#ananas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadeDeMedida"/>
+        <NamedIndividual IRI="#anodeproducao"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cereal"/>
+        <NamedIndividual IRI="#arroz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#banana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OndeEServido"/>
+        <NamedIndividual IRI="#bar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlantaAromatica"/>
+        <NamedIndividual IRI="#baunilha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Corte"/>
+        <NamedIndividual IRI="#bife"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Preparacao"/>
+        <NamedIndividual IRI="#bolo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cor"/>
+        <NamedIndividual IRI="#branco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParteDeOrigem"/>
+        <NamedIndividual IRI="#cabeca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Refrigerante"/>
+        <NamedIndividual IRI="#cocacola"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Consumo"/>
+        <NamedIndividual IRI="#compala"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Corte"/>
+        <NamedIndividual IRI="#costoleta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confecao"/>
+        <NamedIndividual IRI="#cozido"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadeDeMedida"/>
+        <NamedIndividual IRI="#dose"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParteDeOrigem"/>
+        <NamedIndividual IRI="#entrecosto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParteDeOrigem"/>
+        <NamedIndividual IRI="#entremeada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Apresentacao"/>
+        <NamedIndividual IRI="#espetada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Apresentacao"/>
+        <NamedIndividual IRI="#fatia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Corte"/>
+        <NamedIndividual IRI="#febra"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Corte"/>
+        <NamedIndividual IRI="#filete"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confecao"/>
+        <NamedIndividual IRI="#frito"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#fruta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gordura"/>
+        <NamedIndividual IRI="#gordo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Confecao"/>
+        <NamedIndividual IRI="#grelhado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadeDeMedida"/>
+        <NamedIndividual IRI="#idade"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClassificacaoDietetica"/>
+        <NamedIndividual IRI="#light"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParteDeOrigem"/>
+        <NamedIndividual IRI="#lombo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#maca"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#macedonia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gordura"/>
+        <NamedIndividual IRI="#magro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gordura"/>
+        <NamedIndividual IRI="#meiogordo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Acucarado"/>
+        <NamedIndividual IRI="#mel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PlantaAromatica"/>
+        <NamedIndividual IRI="#menta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#misto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sobremesa"/>
+        <NamedIndividual IRI="#mousse"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#papaia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Acucarado"/>
+        <NamedIndividual IRI="#pastilha"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ParteDeOrigem"/>
+        <NamedIndividual IRI="#perna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadeDeMedida"/>
+        <NamedIndividual IRI="#peso"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fruta"/>
+        <NamedIndividual IRI="#pessego"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cor"/>
+        <NamedIndividual IRI="#preto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sobremesa"/>
+        <NamedIndividual IRI="#pudim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Acucarado"/>
+        <NamedIndividual IRI="#rebucado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#recheado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#OndeEServido"/>
+        <NamedIndividual IRI="#restaurante"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#salada"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Preparacao"/>
+        <NamedIndividual IRI="#semi-frio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#TipoDeCombinacao"/>
+        <NamedIndividual IRI="#simples"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Preparacao"/>
+        <NamedIndividual IRI="#tarte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pacote"/>
+        <NamedIndividual IRI="#tetrabrick"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cor"/>
+        <NamedIndividual IRI="#tinto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cor"/>
+        <NamedIndividual IRI="#verde"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cor"/>
+        <NamedIndividual IRI="#vermelho"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnidadeDeMedida"/>
+        <NamedIndividual IRI="#volume"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temSabor"/>
+        <NamedIndividual IRI="#CompalAlpercePacote"/>
+        <NamedIndividual IRI="#alperce"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temSabor"/>
+        <NamedIndividual IRI="#CompalAnanasPacote"/>
+        <NamedIndividual IRI="#ananas"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eProdutoDaMarca"/>
+        <NamedIndividual IRI="#CompalClassic0.20cl"/>
+        <NamedIndividual IRI="#Compal"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temClassificacaoDietetica"/>
+        <NamedIndividual IRI="#CompalLight0.20cl"/>
+        <NamedIndividual IRI="#light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temClassificacaoDietetica"/>
+        <NamedIndividual IRI="#CompalLightPacote"/>
+        <NamedIndividual IRI="#light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temClassificacaoDietetica"/>
+        <NamedIndividual IRI="#SaltalLightPessego"/>
+        <NamedIndividual IRI="#light"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temSabor"/>
+        <NamedIndividual IRI="#SaltalLightPessego"/>
+        <NamedIndividual IRI="#pessego"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temPreparacao"/>
+        <NamedIndividual IRI="#SemiFrioDeAnanas"/>
+        <NamedIndividual IRI="#semi-frio"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#temClassificacaoDietetica"/>
+        <NamedIndividual IRI="#compala"/>
+        <NamedIndividual IRI="#light"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#eDoce"/>
+        <NamedIndividual IRI="#ArrozDoce"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#eLiquido"/>
+        <NamedIndividual IRI="#CompalClassic0.20cl"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#eLiquido"/>
+        <NamedIndividual IRI="#CompalLight0.20cl"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#eDoce"/>
+        <NamedIndividual IRI="#DoceDaAvo"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#temAcucar"/>
+        <NamedIndividual IRI="#HallsMentolSemAcucar"/>
+        <Literal datatypeIRI="&xsd;boolean">false</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#eCurado"/>
+        <NamedIndividual IRI="#QueijoCurado"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#temPreparacao"/>
+        <ObjectProperty abbreviatedIRI=":topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#eMarcaDoProduto"/>
+        <ObjectProperty IRI="#eProdutoDaMarca"/>
+    </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eFilhoDe"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#eProdutoDaMarca"/>
+    </FunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#eMarcaDoProduto"/>
+    </InverseFunctionalObjectProperty>
+    <InverseFunctionalObjectProperty>
+        <ObjectProperty IRI="#ePaiDe"/>
+    </InverseFunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#eIrmaoDe"/>
+    </SymmetricObjectProperty>
+    <DataPropertyRange>
+        <DataProperty IRI="#temAcucar"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sumo</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Compal Alperce Pacote
+Compal Ananas Pacote
+Compal Light 0.20cl
+Santal Light Pessego
+Compal Light Pacote
+
+Experiencia!!! 
+(eProdutoDaMarca some 
+    (Marca
+     and (eMarcaDoProduto some Sumo)))
+ and (eLiquido some Literal)
+</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+
