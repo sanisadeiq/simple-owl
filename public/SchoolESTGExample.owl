@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2015/2/Ontology1425555321291.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2015/2/Ontology1425555321291.owl">
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Declaration>
+        <Class IRI="#Curso"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CursoLicenciatura"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CursoMestrado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doutor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HabilitacoesAcademicas"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Licenciado"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mestre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pessoa"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eAmigoDe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eProfessorDeCurso"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#eProfessorDeEstudante"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#frequentaCurso"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Daniel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Diogo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Doutoramento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EI"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Licenciatura"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MEI-CM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MGSIM"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mestrado"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nelson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Solicitadoria"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Vitor"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Licenciado"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#frequentaCurso"/>
+            <Class IRI="#CursoMestrado"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#CursoLicenciatura"/>
+        <Class IRI="#Curso"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CursoMestrado"/>
+        <Class IRI="#Curso"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Licenciado"/>
+        <NamedIndividual IRI="#Ana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pessoa"/>
+        <NamedIndividual IRI="#Ana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pessoa"/>
+        <NamedIndividual IRI="#Daniel"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pessoa"/>
+        <NamedIndividual IRI="#Diogo"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HabilitacoesAcademicas"/>
+        <NamedIndividual IRI="#Doutoramento"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CursoLicenciatura"/>
+        <NamedIndividual IRI="#EI"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HabilitacoesAcademicas"/>
+        <NamedIndividual IRI="#Licenciatura"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CursoMestrado"/>
+        <NamedIndividual IRI="#MEI-CM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CursoMestrado"/>
+        <NamedIndividual IRI="#MGSIM"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HabilitacoesAcademicas"/>
+        <NamedIndividual IRI="#Mestrado"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pessoa"/>
+        <NamedIndividual IRI="#Nelson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#CursoMestrado"/>
+        <NamedIndividual IRI="#Solicitadoria"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pessoa"/>
+        <NamedIndividual IRI="#Vitor"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eAmigoDe"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Diogo"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eAmigoDe"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Daniel"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eAmigoDe"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Nelson"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frequentaCurso"/>
+        <NamedIndividual IRI="#Ana"/>
+        <NamedIndividual IRI="#Solicitadoria"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#eAmigoDe"/>
+        <NamedIndividual IRI="#Daniel"/>
+        <NamedIndividual IRI="#Vitor"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frequentaCurso"/>
+        <NamedIndividual IRI="#Daniel"/>
+        <NamedIndividual IRI="#MEI-CM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frequentaCurso"/>
+        <NamedIndividual IRI="#Diogo"/>
+        <NamedIndividual IRI="#MGSIM"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#frequentaCurso"/>
+        <NamedIndividual IRI="#Nelson"/>
+        <NamedIndividual IRI="#MEI-CM"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#eProfessorDeEstudante"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#frequentaCurso"/>
+    </FunctionalObjectProperty>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#eAmigoDe"/>
+    </SymmetricObjectProperty>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

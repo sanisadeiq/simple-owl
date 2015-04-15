@@ -49,13 +49,14 @@ app.controller('TreeviewController',['$http', function($http){
 		$http({method: 'GET', url: '/getInitialTree'}).
 		success(function(data, status, headers, config) {
 			alert('no error');
-			tree.array = data;
+			tree.array = data['tree'];
             console.log(data);
 			//$scope.array = data;
 		}).
 		error(function(data, status, headers, config) {
-			alert('error');
-			tree.array = data+status+headers+config;
+			alert('error: ' + JSON.stringify(config));
+			//tree.array = data+status+headers+config;
+			//console.log(data + status + headers + config);
 			//$scope.array = data+status+headers+config;
 		});
 	}]);
