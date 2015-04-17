@@ -13,14 +13,14 @@
 	<script type="text/javascript" src={{ URL::asset('js/bootstrap-multiselect.js') }}></script>
 	<link rel="stylesheet" href={{ URL::asset('css/bootstrap-multiselect.css') }} type="text/css"/>
 
-	<script type="text/javascript" src={{ URL::asset('js/queryBuilder.js') }}></script>
+	<!--<script type="text/javascript" src={{ URL::asset('js/queryBuilder.js') }}></script>-->
 </head>
 
-<body>
+<body ng-controller="TreeviewController as treeviewCtrl">
 
 	<div id="query-area">
 
-		<h1>OWL Query Helper</h1>
+		<h1>Ontology Query Helper</h1>
 
 		<form id="upload-form" action="">
 			<input id="upload-button" type="submit" value="">
@@ -33,20 +33,17 @@
 		<input id="undo-button" type="submit" value="" onclick="rebuildQuery()">
 
 		<div id="query-titles">
-			<div class="query-title class">CLASSES</div>
-			<div class="query-title individual">INDIVIDUALS</div>
-			<div class="query-title relationship">RELATIONSHIPS</div>
-			<div class="query-title operators">OPERATORS</div>
+			<div class="query-title">CLASSES</div>
+			<div class="query-title">INDIVIDUALS</div>
+			<div class="query-title">RELATIONSHIPS</div>
+			<div class="query-title">OPERATORS</div>
 		</div>
 
 		<div id="query-boxes">
 
-				<!-- Receive lists from OWL API instead of hardcoded values -->
-				<select id="classes">
-					<option value="class1">Class A</option>
-					<option value="class2">Class B</option>
-					<option value="class3">Class C</option>
-					<option value="class4">Class D</option>
+
+				<select id="classes" multiselect ng-model="classesSelection" ng-options="class as class for class in arrayClasses">
+					
 				</select>
 
 				<select id="individuals">
@@ -68,15 +65,17 @@
 		</div>
 
 		<p id="swrl-query">
-			<span id="query-title">SWRL QUERY: </span>
+			<span id="query-title">DL QUERY: </span>
 			<span id="query-main"></span>
 		</p>
 
 	</div>
 
-	<div class="tree well" ng-controller="TreeviewController as treeviewCtrl">
+	<div class="tree well" >
   		<collection collection='treeviewCtrl.array'></collection>
  	</div>
+
+ 	<collection collection='treeviewCtrl.array2'></collection>
  	
 </body>
 </html>

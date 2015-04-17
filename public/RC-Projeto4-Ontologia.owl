@@ -1,0 +1,844 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/2013/0/Ontology1357506163092.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/ontologies/2013/0/Ontology1357506163092.owl">
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Algorithm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Application"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Cloning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClusterBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coarse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Crowding"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiversityAsAGoalProblemType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DocumentReference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DynamicPeakIdentification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#EAGA-EvolutionaryAlgorithmToGenerateAlternatives"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Framework"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indicator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IndicatorBased"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Innovization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultiobjectiveOptimization"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MultipopulationModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mutation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Niching"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectiveSpaceDiversity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Operator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Paradigm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PopulationModel"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PredictorCorrector"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProblemType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProgrammingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recombination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchSpace"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SearchSpaceDiversity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Selection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sharing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Structured"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Variation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#applies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canSolve"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasBeenAppliedFor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasSolutionsIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBasedOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isDocumentedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isGuidedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isImplementedInFramework"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSolvedBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isSolvedInProgrammingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#uses"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#usesProgrammingLanguage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AIS"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Adaptive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Airfoils"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Annealing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Automotive"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AverageHausdorffDistance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BioDiversity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#BridgeConstruction"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#C++"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#COGA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CellMapping"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cellular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CellularAutomata"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CellularEA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Combinatorial"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Continuation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ContinuationLevelSet"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ContinuationMultiobjective"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Continuous"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CovarianceMatrixAdaptation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DIOPT"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DIVA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DiverseSetAboveThreshold"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#DrugDiscovery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#EAGA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ECJ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ELSA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Evolution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ExplorationInnovization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#FinancialPortfolio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GapIndicators"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GeneratingAlternatives"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HyPE"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HyperMutation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Hypervolume"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ImmuneSystems"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IndicatorBasedGenerational"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IndicatorBasedSteadyState"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Island"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Java"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LevelSetApproximation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MathLabScripting"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mathlab"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mixed"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MultiglobalOptimization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MultimodalOptimization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NOAH"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Neighborhood/Celullar"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Niching"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NichingCMA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NichingGA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Noah"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NonLinearOptimization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OmniOpt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#POSEA"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Panmictic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phyton"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PortfolioOptimization"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#RIndicator"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Restart"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SmallWorld"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Solow-Polasky"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StructuralVariableDimension"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Weitzman"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#jMetal"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Cloning"/>
+        <Class IRI="#Variation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClusterBased"/>
+        <Class IRI="#Niching"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Coarse"/>
+        <Class IRI="#MultipopulationModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Crowding"/>
+        <Class IRI="#Niching"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiversityAsAGoalProblemType"/>
+        <Class IRI="#ProblemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DynamicPeakIdentification"/>
+        <Class IRI="#Niching"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#EAGA-EvolutionaryAlgorithmToGenerateAlternatives"/>
+        <Class IRI="#ProblemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fine"/>
+        <Class IRI="#MultipopulationModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IndicatorBased"/>
+        <Class IRI="#Selection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Innovization"/>
+        <Class IRI="#SearchSpaceDiversity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultiobjectiveOptimization"/>
+        <Class IRI="#ProblemType"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MultipopulationModel"/>
+        <Class IRI="#PopulationModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mutation"/>
+        <Class IRI="#Variation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Niching"/>
+        <Class IRI="#Selection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectiveSpaceDiversity"/>
+        <Class IRI="#MultiobjectiveOptimization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PopulationModel"/>
+        <Class abbreviatedIRI=":Thing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PredictorCorrector"/>
+        <Class IRI="#Variation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recombination"/>
+        <Class IRI="#Variation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SearchSpaceDiversity"/>
+        <Class IRI="#MultiobjectiveOptimization"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Selection"/>
+        <Class IRI="#Operator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sharing"/>
+        <Class IRI="#Niching"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Structured"/>
+        <Class IRI="#PopulationModel"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Variation"/>
+        <Class IRI="#Operator"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#AIS"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Structured"/>
+        <NamedIndividual IRI="#Adaptive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Application"/>
+        <NamedIndividual IRI="#Airfoils"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#Annealing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Application"/>
+        <NamedIndividual IRI="#Automotive"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#AverageHausdorffDistance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#BioDiversity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Application"/>
+        <NamedIndividual IRI="#BridgeConstruction"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgrammingLanguage"/>
+        <NamedIndividual IRI="#C"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgrammingLanguage"/>
+        <NamedIndividual IRI="#C++"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#COGA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#CellMapping"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#Cellular"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#CellularAutomata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#CellularAutomata"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#CellularEA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchSpace"/>
+        <NamedIndividual IRI="#Combinatorial"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#Continuation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#ContinuationLevelSet"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#ContinuationMultiobjective"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchSpace"/>
+        <NamedIndividual IRI="#Continuous"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mutation"/>
+        <NamedIndividual IRI="#CovarianceMatrixAdaptation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#DIOPT"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#DIVA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#DiverseSetAboveThreshold"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Application"/>
+        <NamedIndividual IRI="#DrugDiscovery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#EAGA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Framework"/>
+        <NamedIndividual IRI="#ECJ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#ELSA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#Evolution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#ExplorationInnovization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#FinancialPortfolio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#GapIndicators"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#GeneratingAlternatives"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#HyPE"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Mutation"/>
+        <NamedIndividual IRI="#HyperMutation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#Hypervolume"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#ImmuneSystems"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IndicatorBased"/>
+        <NamedIndividual IRI="#IndicatorBasedGenerational"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#IndicatorBased"/>
+        <NamedIndividual IRI="#IndicatorBasedSteadyState"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Structured"/>
+        <NamedIndividual IRI="#Island"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgrammingLanguage"/>
+        <NamedIndividual IRI="#Java"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#LevelSetApproximation"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgrammingLanguage"/>
+        <NamedIndividual IRI="#MathLabScripting"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Framework"/>
+        <NamedIndividual IRI="#Mathlab"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchSpace"/>
+        <NamedIndividual IRI="#Mixed"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#MultiglobalOptimization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#MultimodalOptimization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#NOAH"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Structured"/>
+        <NamedIndividual IRI="#Neighborhood/Celullar"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Paradigm"/>
+        <NamedIndividual IRI="#Niching"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#NichingCMA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#NichingGA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#Noah"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Application"/>
+        <NamedIndividual IRI="#NonLinearOptimization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#OmniOpt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#POSEA"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PopulationModel"/>
+        <NamedIndividual IRI="#Panmictic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProgrammingLanguage"/>
+        <NamedIndividual IRI="#Phyton"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ProblemType"/>
+        <NamedIndividual IRI="#PortfolioOptimization"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#RIndicator"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Algorithm"/>
+        <NamedIndividual IRI="#Restart"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Structured"/>
+        <NamedIndividual IRI="#SmallWorld"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#Solow-Polasky"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SearchSpace"/>
+        <NamedIndividual IRI="#StructuralVariableDimension"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Indicator"/>
+        <NamedIndividual IRI="#Weitzman"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Framework"/>
+        <NamedIndividual IRI="#jMetal"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#applies"/>
+        <NamedIndividual IRI="#Cellular"/>
+        <NamedIndividual IRI="#Adaptive"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isOf"/>
+        <NamedIndividual IRI="#DrugDiscovery"/>
+        <NamedIndividual IRI="#LevelSetApproximation"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#applies"/>
+        <NamedIndividual IRI="#ELSA"/>
+        <NamedIndividual IRI="#Panmictic"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasBeenAppliedFor"/>
+        <NamedIndividual IRI="#ELSA"/>
+        <NamedIndividual IRI="#DrugDiscovery"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isImplementedInFramework"/>
+        <NamedIndividual IRI="#ELSA"/>
+        <NamedIndividual IRI="#Mathlab"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#isSolvedBy"/>
+        <NamedIndividual IRI="#LevelSetApproximation"/>
+        <NamedIndividual IRI="#ELSA"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#usesProgrammingLanguage"/>
+        <NamedIndividual IRI="#Mathlab"/>
+        <NamedIndividual IRI="#MathLabScripting"/>
+    </ObjectPropertyAssertion>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#isSolvedBy"/>
+        <ObjectProperty IRI="#canSolve"/>
+    </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#applies"/>
+        <Class IRI="#PopulationModel"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canSolve"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasBeenAppliedFor"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSolutionsIn"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasSolutionsIn"/>
+        <Class IRI="#Application"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isGuidedBy"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isOf"/>
+        <Class IRI="#Application"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="#Algorithm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#applies"/>
+        <Class IRI="#Selection"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canSolve"/>
+        <Class IRI="#ProblemType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasBeenAppliedFor"/>
+        <Class IRI="#Application"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasSolutionsIn"/>
+        <Class IRI="#SearchSpace"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBasedOn"/>
+        <Class IRI="#Paradigm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isDocumentedIn"/>
+        <Class IRI="#DocumentReference"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isGuidedBy"/>
+        <Class IRI="#Indicator"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isOf"/>
+        <Class IRI="#ProblemType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#uses"/>
+        <Class IRI="#Operator"/>
+    </ObjectPropertyRange>
+    <SubObjectPropertyOf>
+        <ObjectPropertyChain>
+            <ObjectProperty IRI="#isSolvedBy"/>
+            <ObjectProperty IRI="#isImplementedInFramework"/>
+            <ObjectProperty IRI="#usesProgrammingLanguage"/>
+        </ObjectPropertyChain>
+        <ObjectProperty IRI="#isSolvedInProgrammingLanguage"/>
+    </SubObjectPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net -->
+

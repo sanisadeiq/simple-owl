@@ -1050,6 +1050,30 @@
         <Class IRI="#UnidadeDeMedida"/>
         <NamedIndividual IRI="#volume"/>
     </ClassAssertion>
+	<!--
+	TEST, START
+	-->
+	<NegativeObjectPropertyAssertion>
+        <ObjectProperty IRI="#eProdutoDaMarca"/>
+        <NamedIndividual IRI="#CompalClassic0.20cl"/>
+        <NamedIndividual IRI="#alperce"/>
+    </NegativeObjectPropertyAssertion>
+	<NegativeDataPropertyAssertion>
+     <DataProperty IRI="#eDoce"/>
+     <NamedIndividual IRI="#CompalClassic0.20cl"/>
+     <Literal datatypeIRI="&xsd;boolean">false</Literal>
+   </NegativeDataPropertyAssertion>
+     <DifferentIndividuals>
+     <NamedIndividual IRI="#CompalClassic0.20cl"/>
+     <NamedIndividual IRI="#CompalAnanasPacote"/>
+   </DifferentIndividuals>
+   <SameIndividual>
+     <NamedIndividual IRI="#CompalClassic0.20cl"/>
+     <NamedIndividual IRI="#CompalAlpercePacote"/>
+   </SameIndividual>
+	<!--
+	TEST, END
+	-->
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#temSabor"/>
         <NamedIndividual IRI="#CompalAlpercePacote"/>

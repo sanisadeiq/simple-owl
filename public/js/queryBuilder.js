@@ -30,7 +30,7 @@ var optionsSet3 = [
 
 $(document).ready(function() {
 
-	$('#classes, #individuals, #relationships, #operators').multiselect({
+	/*$('#classes').multiselect({
 		checkboxName: 'multiselect[]',
 		disableIfEmpty: true,
 		maxHeight: 250,
@@ -39,7 +39,7 @@ $(document).ready(function() {
 		buttonWidth: '200px',
 		nonSelectedText: '(none selected)',
 		allSelectedText: '(all selected)'
-	});
+	});*/
 
 	var classesOptions = {
 		onChange: function(option) {

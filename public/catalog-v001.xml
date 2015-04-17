@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1429100511557" name="http://www.semanticweb.org/ontologies/2011/4/Ontology1306707127855.owl" uri="RC%20-%20Ontologia%20-%20Consumos%20Alimentares.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="http://example.com/owl/families/" uri="example2.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="http://www.semanticweb.org/ontologies/2011/4/Ontology1306707127855.owl" uri="RC%20-%20Ontologia%20-%20Consumos%20Alimentares.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="http://www.semanticweb.org/ontologies/2013/0/Ontology1357506163092.owl" uri="RC-Projeto4-Ontologia.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="duplicate:http://www.semanticweb.org/ontologies/2015/2/Ontology1425555321291.owl" uri="SchoolESTGExample.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="duplicate:http://www.semanticweb.org/ontologies/2015/2/Ontology1425555321291.owl" uri="SchoolESTGExample.xml"/>
+        <uri id="Automatically generated entry, Timestamp=1429269678860" name="http://www.w3.org/2002/07/owl#" uri="school-inferred.owl"/>
     </group>
 </catalog>
